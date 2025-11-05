@@ -58,23 +58,23 @@ export default function Showcase() {
   return (
     <div className="relative">
       {/* Keunggulan */}
-      <section id="keunggulan" className="py-20 bg-slate-950">
+      <section id="keunggulan" className="py-20 bg-[#1D2B3C]">
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Keunggulan Aspal Cair Emulsi</h2>
-            <p className="mt-3 text-slate-300 max-w-2xl">
+            <p className="mt-3 text-white/80 max-w-2xl">
               Dirancang untuk ketahanan dan efisiensi pekerjaan—pilihan tepat untuk kontraktor, pemilik rumah, dan proyek infrastruktur.
             </p>
           </Reveal>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, i) => (
               <Reveal key={i}>
-                <div className="group rounded-xl border border-slate-800 bg-slate-900/60 p-6 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-400/10 transition-all">
-                  <div className="w-12 h-12 rounded-lg bg-amber-400/15 border border-amber-400/20 flex items-center justify-center">
-                    <f.icon className="text-amber-400" />
+                <div className="group rounded-xl border border-white/10 bg-white/5 p-6 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#FFA500]/10 transition-all">
+                  <div className="w-12 h-12 rounded-lg bg-[#FFA500]/15 border border-[#FFA500]/30 flex items-center justify-center">
+                    <f.icon className="text-[#FFA500]" />
                   </div>
                   <h3 className="mt-4 text-xl font-semibold text-white">{f.title}</h3>
-                  <p className="mt-2 text-slate-300">{f.desc}</p>
+                  <p className="mt-2 text-white/80">{f.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -83,19 +83,19 @@ export default function Showcase() {
       </section>
 
       {/* Produk & Layanan */}
-      <section id="produk-layanan" className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
+      <section id="produk-layanan" className="py-20 bg-gradient-to-b from-[#1D2B3C] to-[#1a2634]">
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white">Produk & Layanan</h2>
-                <p className="mt-3 text-slate-300">Tersedia berbagai varian kemasan serta layanan aplikatif profesional.</p>
+                <p className="mt-3 text-white/80">Tersedia berbagai varian kemasan serta layanan aplikatif profesional.</p>
               </div>
               <a
                 href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20memesan%20Aspal%20Cair%20Emulsi"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-amber-400 text-slate-900 font-semibold shadow hover:bg-amber-300 transition-colors"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold shadow hover:bg-[#FFC107] transition-colors"
               >
                 Beli Sekarang
               </a>
@@ -105,14 +105,14 @@ export default function Showcase() {
           <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {products.map((p) => (
               <Reveal key={p.slug}>
-                <div className="group rounded-xl bg-slate-800/40 border border-slate-700/60 overflow-hidden hover:shadow-xl hover:shadow-amber-400/10 transition-all">
-                  <div className="aspect-square bg-[url('https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIyNjIzMTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80')] bg-cover bg-center" aria-label={`kemasan ${p.size}`} role="img" />
+                <div className="group rounded-xl bg-white/5 border border-white/10 overflow-hidden hover:shadow-xl hover:shadow-[#FFA500]/10 transition-all">
+                  <div className="aspect-square bg-[url('https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80')] bg-cover bg-center" aria-label={`kemasan ${p.size}`} role="img" />
                   <div className="p-4">
                     <h4 className="text-white font-semibold">Aspal Cair Emulsi {p.size}</h4>
-                    <p className="text-slate-300 text-sm mt-1">Cocok untuk perbaikan lokal dan pekerjaan skala {p.size === '200 kg' ? 'besar' : 'rumah/proyek kecil'}.</p>
+                    <p className="text-white/80 text-sm mt-1">Cocok untuk perbaikan lokal dan pekerjaan skala {p.size === '200 kg' ? 'besar' : 'rumah/proyek kecil'}.</p>
                     <div className="mt-3 flex items-center gap-2">
-                      <a href={`https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20beli%20${encodeURIComponent('Aspal Emulsi ' + p.size)}`} target="_blank" rel="noreferrer" className="px-3 py-2 text-sm rounded-md bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 transition">Beli via WA</a>
-                      <a href={`/produk/${p.slug}`} className="px-3 py-2 text-sm rounded-md border border-slate-600 text-slate-200 hover:bg-white/5 transition">Detail</a>
+                      <a href={`https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20beli%20${encodeURIComponent('Aspal Emulsi ' + p.size)}`} target="_blank" rel="noreferrer" className="px-3 py-2 text-sm rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold hover:bg-[#FFC107] transition">Beli via WA</a>
+                      <a href={`/produk/${p.slug}`} className="px-3 py-2 text-sm rounded-md border border-white/20 text-white hover:bg-white/5 transition">Detail</a>
                     </div>
                   </div>
                 </div>
@@ -122,27 +122,27 @@ export default function Showcase() {
 
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Reveal>
-              <div className="rounded-2xl overflow-hidden border border-slate-700/60 bg-slate-800/40">
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
                 <div className="aspect-[16/9] bg-[url('https://images.unsplash.com/photo-1604328698692-f76ea9498e76?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center" aria-label="layanan waterproofing" role="img" />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-white">Layanan Waterproofing</h3>
-                  <p className="mt-2 text-slate-300">Penanganan bocor dak atap, balkon, kamar mandi, hingga kolam renang dengan material aspal emulsi berkualitas.</p>
+                  <p className="mt-2 text-white/80">Penanganan bocor dak atap, balkon, kamar mandi, hingga kolam renang dengan material aspal emulsi berkualitas.</p>
                   <div className="mt-4 flex gap-2">
-                    <a href="/layanan/waterproofing" className="px-4 py-2 rounded-md border border-slate-600 text-slate-200 hover:bg-white/5 transition">Selengkapnya</a>
-                    <a href="https://wa.me/6281234567890?text=Konsultasi%20layanan%20waterproofing" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 transition">Konsultasi</a>
+                    <a href="/layanan/waterproofing" className="px-4 py-2 rounded-md border border-white/20 text-white hover:bg-white/5 transition">Selengkapnya</a>
+                    <a href="https://wa.me/6281234567890?text=Konsultasi%20layanan%20waterproofing" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold hover:bg-[#FFC107] transition">Konsultasi</a>
                   </div>
                 </div>
               </div>
             </Reveal>
             <Reveal>
-              <div className="rounded-2xl overflow-hidden border border-slate-700/60 bg-slate-800/40">
-                <div className="aspect-[16/9] bg-[url('https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjIyNjIzMTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80')] bg-cover bg-center" aria-label="layanan slurry seal" role="img" />
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div className="aspect-[16/9] bg-[url('https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80')] bg-cover bg-center" aria-label="layanan slurry seal" role="img" />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-white">Layanan Slurry Seal</h3>
-                  <p className="mt-2 text-slate-300">Perbaikan permukaan jalan beton/aspal untuk meningkatkan kelicinan, daya tahan, dan estetika.</p>
+                  <p className="mt-2 text-white/80">Perbaikan permukaan jalan beton/aspal untuk meningkatkan kelicinan, daya tahan, dan estetika.</p>
                   <div className="mt-4 flex gap-2">
-                    <a href="/layanan/slurry-seal" className="px-4 py-2 rounded-md border border-slate-600 text-slate-200 hover:bg-white/5 transition">Selengkapnya</a>
-                    <a href="https://wa.me/6281234567890?text=Konsultasi%20layanan%20slurry%20seal" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 transition">Konsultasi</a>
+                    <a href="/layanan/slurry-seal" className="px-4 py-2 rounded-md border border-white/20 text-white hover:bg-white/5 transition">Selengkapnya</a>
+                    <a href="https://wa.me/6281234567890?text=Konsultasi%20layanan%20slurry%20seal" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold hover:bg-[#FFC107] transition">Konsultasi</a>
                   </div>
                 </div>
               </div>
@@ -152,11 +152,11 @@ export default function Showcase() {
       </section>
 
       {/* Galeri */}
-      <section id="proyek" className="py-20 bg-slate-950">
+      <section id="proyek" className="py-20 bg-[#1a2634]">
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Proyek & Galeri</h2>
-            <p className="mt-3 text-slate-300">Dokumentasi pekerjaan di atap, kolam, hingga jalan lingkungan.</p>
+            <p className="mt-3 text-white/80">Dokumentasi pekerjaan di atap, kolam, hingga jalan lingkungan.</p>
           </Reveal>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -169,7 +169,7 @@ export default function Showcase() {
                       : 'slurry seal perbaikan jalan beton Jawa Timur'
                   }
                   loading="lazy"
-                  className="w-full h-64 object-cover rounded-xl border border-slate-800 hover:scale-[1.02] transition-transform"
+                  className="w-full h-64 object-cover rounded-xl border border-white/10 hover:scale-[1.02] transition-transform"
                 />
               </Reveal>
             ))}
@@ -178,11 +178,11 @@ export default function Showcase() {
       </section>
 
       {/* Artikel */}
-      <section id="artikel" className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
+      <section id="artikel" className="py-20 bg-gradient-to-b from-[#1a2634] to-[#1D2B3C]">
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Artikel Terbaru</h2>
-            <p className="mt-3 text-slate-300">Edukasi dan tips seputar waterproofing dan slurry seal.</p>
+            <p className="mt-3 text-white/80">Edukasi dan tips seputar waterproofing dan slurry seal.</p>
           </Reveal>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -206,17 +206,17 @@ export default function Showcase() {
               },
             ].map((a) => (
               <Reveal key={a.slug}>
-                <article className="rounded-2xl overflow-hidden border border-slate-700/60 bg-slate-800/40 hover:shadow-xl hover:shadow-amber-400/10 transition-all">
+                <article className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:shadow-xl hover:shadow-[#FFA500]/10 transition-all">
                   <img src={a.img} alt={a.title} loading="lazy" className="h-48 w-full object-cover" />
                   <div className="p-6">
-                    <p className="text-amber-400 text-sm font-medium">{a.date}</p>
+                    <p className="text-[#FFA500] text-sm font-medium">{a.date}</p>
                     <h3 className="text-white text-xl font-semibold mt-1">{a.title}</h3>
-                    <p className="text-slate-300 mt-2 line-clamp-3">
+                    <p className="text-white/80 mt-2 line-clamp-3">
                       Layanan profesional untuk kebutuhan {a.title.toLowerCase()}. Konsultasi gratis, tim berpengalaman, hasil rapi dan tahan lama.
                     </p>
                     <div className="mt-4 flex gap-2">
-                      <a href={`/artikel/${a.slug}`} className="px-4 py-2 rounded-md border border-slate-600 text-slate-200 hover:bg-white/5 transition">Baca Selengkapnya</a>
-                      <a href="#produk-layanan" className="px-4 py-2 rounded-md bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 transition">Lihat Produk</a>
+                      <a href={`/artikel/${a.slug}`} className="px-4 py-2 rounded-md border border-white/20 text-white hover:bg-white/5 transition">Baca Selengkapnya</a>
+                      <a href="#produk-layanan" className="px-4 py-2 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold hover:bg-[#FFC107] transition">Lihat Produk</a>
                     </div>
                   </div>
                 </article>
@@ -227,22 +227,22 @@ export default function Showcase() {
       </section>
 
       {/* Kontak */}
-      <section id="kontak" className="py-20 bg-slate-950">
+      <section id="kontak" className="py-20 bg-[#1a2634]">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
           <Reveal>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Kontak Kami</h2>
-              <p className="mt-3 text-slate-300">Konsultasi dan pemesanan cepat via WhatsApp atau formulir.</p>
+              <p className="mt-3 text-white/80">Konsultasi dan pemesanan cepat via WhatsApp atau formulir.</p>
               <form className="mt-6 grid grid-cols-1 gap-4">
-                <input required type="text" placeholder="Nama" className="px-4 py-3 rounded-md bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                <input required type="email" placeholder="Email" className="px-4 py-3 rounded-md bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                <textarea required rows={5} placeholder="Pesan" className="px-4 py-3 rounded-md bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-                <button type="submit" className="inline-flex justify-center px-5 py-3 rounded-md bg-amber-400 text-slate-900 font-semibold hover:bg-amber-300 transition">Kirim Pesan</button>
+                <input required type="text" placeholder="Nama" className="px-4 py-3 rounded-md bg-white/5 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFA500]" />
+                <input required type="email" placeholder="Email" className="px-4 py-3 rounded-md bg-white/5 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFA500]" />
+                <textarea required rows={5} placeholder="Pesan" className="px-4 py-3 rounded-md bg-white/5 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFA500]" />
+                <button type="submit" className="inline-flex justify-center px-5 py-3 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold hover:bg-[#FFC107] transition">Kirim Pesan</button>
               </form>
             </div>
           </Reveal>
           <Reveal>
-            <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
               <iframe
                 title="Peta lokasi Aspal Emulsi Sidoarjo"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.432947253717!2d112.717!3d-7.309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb7d4a3f6e7f%3A0x31d!2sSidoarjo!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"

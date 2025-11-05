@@ -9,7 +9,7 @@ export default function Hero() {
           scene="https://prod.spline.design/zhZFnwyOYLgqlLWk/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/90" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#1D2B3C]/80 via-[#1D2B3C]/50 to-[#1D2B3C]/95" />
       </div>
 
       <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
@@ -26,7 +26,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mt-4 text-lg md:text-xl text-slate-200 max-w-2xl"
+            className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl"
           >
             Solusi anti bocor terpercaya untuk atap dak, kolam renang, dan jalan beton. Cepat, rapi, dan tahan lama.
           </motion.p>
@@ -40,14 +40,14 @@ export default function Hero() {
               href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20waterproofing%20dan%20beli%20aspal%20emulsi"
               target="_blank"
               rel="noreferrer"
-              className="group relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-md bg-amber-400 text-slate-900 font-semibold shadow-lg"
+              className="group relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-md bg-[#FFA500] text-[#1D2B3C] font-semibold shadow-lg"
             >
               <span className="relative">Hubungi Kami</span>
-              <span className="absolute inset-0 -translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-amber-300/60" />
+              <span className="absolute inset-0 -translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-[#FFC107]/60" />
             </a>
             <a
               href="#produk-layanan"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-600/60 text-slate-200 hover:bg-white/5 backdrop-blur transition"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/20 text-white hover:bg-white/5 backdrop-blur transition"
             >
               Lihat Produk & Layanan
             </a>
